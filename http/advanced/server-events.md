@@ -56,7 +56,7 @@ const server = createServer({
   port: 1337,
   httpListener,
   dependencies: [
-    bindEageryTo(WebSocketServerToken)(async () =>
+    bindEagerlyTo(WebSocketServerToken)(async () =>
       await (await webSocketServer)()
     ),
   ],
